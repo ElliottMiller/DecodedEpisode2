@@ -4,10 +4,6 @@ In decoded episode 2, we aim to show you a recipe that allows you to quickly get
 
 You can see the current master of this sample live [here](http://decodedepisode2.azurewebsites.net). The site is linked up to this GitHub and is continuously deploying new builds every time a push is made. Pretty cool!
 
-# How this repo works:#
-
-This repo is set up using git tags to allow you to see each stage of development as we go along. Just check out the commit associated with each tag and you can see the app evolve as we go! If you're browsing on GitHub, you can check out each tag with the branch/tag dropdown on the top left. If you're viewing the repo locally, just use "git tag" to see all of the tags.
-
 # Prerequisites:
 
 You will need [node](http://www.nodejs.org "node") and an editor of your choice to view and edit code. I personally like [Visual Studio Code](https://code.visualstudio.com/), but use what's most comfortable for you.
@@ -22,7 +18,7 @@ You can install tsd by typing:
 
 Note the -g tag, which installs packages globally. You want to do this because your project doesn't specifically use tsd. It's just a package that you're using to make yourself a more productive programmer.
 
-I've included the tsd.json that's relevant at each tag, so you can just run
+If you are downloading the repo and just want to get the typings, run:
 
 	tsd install
 
@@ -34,7 +30,7 @@ which will create a new tsd.json and a blank tsd.d.ts (typing file) for you to g
 
 ## Part 1 - Good old HTML:  ##
 
-Our solution starts with the "part1" tag on the repo. In this commit, we have some HTML, Bootstrap to help us out with styling, and some TypeScript for our client that populates the view with fake data. It's not really an application - yet. In order to make this real, we need to get some real data.
+To start out, we have some HTML, Bootstrap to help us out with styling, and some TypeScript for our client that populates the view with fake data. It's not really an application - yet. In order to make this real, we need to get some real data.
 
 **Key technologies:**
 
