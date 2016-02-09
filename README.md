@@ -110,3 +110,29 @@ Using the GitHub API, we're able to easily query for the top collaborators for t
 - request package on npm
 - npm-registry package on npm
 - github package on npm
+
+## Part 3 - Persistence
+
+Now it's time to add persistence to the mix, courtesy of [MongoLabs](https://mongolab.com/) and [Microsoft Azure](https://azure.microsoft.com/). Now you can favorite a repo and have that preference persist across sessions! To do that, we pull in another package from npm ("mongodb") and used that to do some simple persistence to our free Mongo server.
+
+	npm install mongodb --save
+
+And yes, there are typings!
+
+	tsd install mongodb --save
+
+**Key technologies:**
+
+- npm
+- mongodb package on npm
+- MongoLabs
+- Microsoft Azure
+
+## Part 4 - Authentication and Identity
+
+Now we want to add in authentication to our application and ensure that your favorites are visible to you and you alone. To do that, we utilize the Open Source [KurveJS](https://github.com/MicrosoftDX/kurvejs) library to connect to Azure Active Directory. We also incorporate the user ID and client ID into the MongoDB documents to ensure that when we pull in a user, we only pull in favorites associated with that user.
+
+**Key technologies:**
+
+- KurveJS
+- Azure Active Directory

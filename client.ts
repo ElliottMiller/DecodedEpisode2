@@ -73,6 +73,20 @@ function getRepos() {
 	});
 }
 $(document).ready(function() {
-
 	getRepos();
+    $("#login").click(function(e) {
+        e.preventDefault();
+		var identity = new Kurve.Identity(
+			"212065fa-ca9e-472a-8b0e-84a0b36c5f64",
+			window.location.origin + "/login.html"
+		);
+		identity.login(function(error) {
+			if(identity.isLoggedIn()) {
+				curUser = identity.getIdToken();
+				document.getElementById("contributors_container").style.display = "none";
+				document.getElementById("login").style.display = "none";
+				getPackages();
+			}
+		});
+    });
 });
